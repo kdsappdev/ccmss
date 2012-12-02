@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BB4C4AB-00A9-404A-9D1F-08705EA6C7D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCMS.Plugins</RootNamespace>
+    <AssemblyName>CCMS.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CCMS.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\CCMS\dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSource.cs" />
+    <Compile Include="HMManger\CustomerRegAndSelectUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HMManger\CustomerRegAndSelectUserControl.Designer.cs">
+      <DependentUpon>CustomerRegAndSelectUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMManger\ExpiredRegUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HMManger\ExpiredRegUserControl.Designer.cs">
+      <DependentUpon>ExpiredRegUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMManger\ExpiredSelectUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HMManger\ExpiredSelectUserControl.Designer.cs">
+      <DependentUpon>ExpiredSelectUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMManger\SettleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HMManger\SettleUserControl.Designer.cs">
+      <DependentUpon>SettleUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMManger\TollStatisticsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HMManger\TollStatisticsUserControl.Designer.cs">
+      <DependentUpon>TollStatisticsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\BankLendingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\BankLendingUserControl.Designer.cs">
+      <DependentUpon>BankLendingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\BasicSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\BasicSettingUserControl.Designer.cs">
+      <DependentUpon>BasicSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\BatchPranUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\BatchPranUserControl.Designer.cs">
+      <DependentUpon>BatchPranUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\CustomerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\CustomerUserControl.Designer.cs">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\PayRegUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\PayRegUserControl.Designer.cs">
+      <DependentUpon>PayRegUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\RePlanMakeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\RePlanMakeUserControl.Designer.cs">
+      <DependentUpon>RePlanMakeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\RePlanUpateSelectUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\RePlanUpateSelectUserControl.Designer.cs">
+      <DependentUpon>RePlanUpateSelectUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\CCBatchPranUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\CCBatchPranUserControl.Designer.cs">
+      <DependentUpon>CCBatchPranUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCCManger\BankRePlanRegSelectUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCCManger\BankRePlanRegSelectUserControl.Designer.cs">
+      <DependentUpon>BankRePlanRegSelectUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ITextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ITextBox.Designer.cs">
+      <DependentUpon>ITextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ConstSql.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HMManger\CustomerRegAndSelectUserControl.resx">
+      <DependentUpon>CustomerRegAndSelectUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMManger\ExpiredRegUserControl.resx">
+      <DependentUpon>ExpiredRegUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMManger\SettleUserControl.resx">
+      <DependentUpon>SettleUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMManger\TollStatisticsUserControl.resx">
+      <DependentUpon>TollStatisticsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCManger\BankLendingUserControl.resx">
+      <DependentUpon>BankLendingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCManger\BasicSettingUserControl.resx">
+      <DependentUpon>BasicSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCManger\CustomerUserControl.resx">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCManger\PayRegUserControl.resx">
+      <DependentUpon>PayRegUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCManger\RePlanMakeUserControl.resx">
+      <DependentUpon>RePlanMakeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ITextBox.resx">
+      <DependentUpon>ITextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CCMS.Plugin\CCMS.Common.csproj">
+      <Project>{91D522C5-8926-4CAA-A331-DE9E87995D53}</Project>
+      <Name>CCMS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCMS.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
