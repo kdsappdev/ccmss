@@ -1,0 +1,10 @@
+H:\CCMS\CCMS\CCMS.Plugin\bin\Debug\CCMS.Common.dll
+H:\CCMS\CCMS\CCMS.Plugin\bin\Debug\CCMS.Common.pdb
+H:\CCMS\CCMS\CCMS.Plugin\bin\Debug\log4net.dll
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\ResolveAssemblyReference.cache
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\CCMS.UI.AddinTreeView.resources
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\CCMS.UI.XTreeView.resources
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\ResGen.read.1.tlog
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\ResGen.write.1.tlog
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\CCMS.Common.dll
+H:\CCMS\CCMS\CCMS.Plugin\obj\Debug\CCMS.Common.pdb

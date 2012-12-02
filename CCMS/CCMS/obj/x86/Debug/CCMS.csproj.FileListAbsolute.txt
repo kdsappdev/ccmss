@@ -1,0 +1,14 @@
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\CCMS.MainForm.resources
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\CCMS.Properties.Resources.resources
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\ResGen.read.1.tlog
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\ResGen.write.1.tlog
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.exe
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.pdb
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\CCMS.exe
+H:\CCMS\CCMS\CCMS\obj\x86\Debug\CCMS.pdb
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.Plugins.dll
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.Plugins.pdb
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.Common.dll
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.Common.pdb
+H:\CCMS\CCMS\CCMS\bin\Debug\CCMS.exe.config
