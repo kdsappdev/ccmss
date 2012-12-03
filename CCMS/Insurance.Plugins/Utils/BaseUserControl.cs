@@ -8,6 +8,7 @@ namespace Insurance.Plugins.Utils
     {
         public BaseUserControl()
         {
+            _author = "王超";
             _appOrder = 2;
             _appKey = 6;
             _appName = "保险管理";
