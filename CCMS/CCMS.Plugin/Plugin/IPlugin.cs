@@ -71,6 +71,7 @@ namespace CCMS.Plugin
         int Order { get; }
         string AppName { get; }
         int AppOrder { get; }
+        int AppKey { get; }
     }
 
     public class PluginHelper

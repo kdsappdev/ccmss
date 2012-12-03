@@ -11,7 +11,8 @@ namespace CCMS.Plugin
         protected object _tag;
         protected int _order;
         protected int _appOrder;
-
+        protected int _appKey;
+        public int AppKey { get { return _appKey; } }
         public virtual int AppOrder
         {
             get { return _appOrder; }

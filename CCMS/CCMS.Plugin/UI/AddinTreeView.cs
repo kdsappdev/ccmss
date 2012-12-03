@@ -220,7 +220,7 @@ namespace CCMS.UI
                 foreach (IPlugin addin in addinList)
                 {
                     Module m1 = new Module();
-                    m1.Id = "G0";
+                    m1.Id = "G"+addin.AppKey;
                     m1.Name = addin.AppName;
                     m1.Order = addin.AppOrder;
                     m1.ClassName = "";

@@ -9,6 +9,7 @@ namespace CCMS.Plugins.Utils
         public BaseUserControl()
         {
             _appOrder = 1;
+            _appKey = 0;
             _appName = "消费信贷";
         }
     }
