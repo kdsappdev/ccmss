@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.MCCManger
 {
-    public partial class PayRegUserControl : CCMS.Plugin.AbstractPlugin
+    public partial class PayRegUserControl : Utils.BaseUserControl
     {
         public PayRegUserControl()
         {
@@ -19,6 +19,7 @@ namespace CCMS.Plugins.MCCManger
         {
             this._tag = new CCMS.UI.Module("G3", "汽车消费贷款管理", "", 2, "G0");
             this._pluginKey = 11;
+            this._order = 4;
             this._pluginName = "交款登记";
         }
         #endregion

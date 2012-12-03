@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.HMManger
 {
-    public partial class SettleUserControl :  CCMS.Plugin.AbstractPlugin
+    public partial class SettleUserControl : Utils.BaseUserControl
     {
         public SettleUserControl()
         {
@@ -20,6 +20,7 @@ namespace CCMS.Plugins.HMManger
         {
             this._tag = new CCMS.UI.Module("G1", "住房按揭管理", "",0, "G0");
             this._pluginKey = 3;
+            this._order = 3;
             this._pluginName = "结算信息";
         }
         #endregion

@@ -216,35 +216,40 @@ namespace CCMS.UI
             {
                 this.xTreeView1.Nodes.Clear();
                 TreeDataSet ds = new TreeDataSet();
-                TreeNode root = new TreeNode("已加载的插件", this.rootImageIndex, this.rootImageIndex);
-                root.ExpandAll();
-                this.xTreeView1.Nodes.Add(root);
                 IList<IPlugin> addinList = this.addinMgr.PluginList;
                 foreach (IPlugin addin in addinList)
                 {
+                    Module m1 = new Module();
+                    m1.Id = "G0";
+                    m1.Name = addin.AppName;
+                    m1.Order = addin.AppOrder;
+                    m1.ClassName = "";
+                    m1.ModuleType = "ModuleGroup";
+                    m1.ParanetId = "G-1";
                     Module m = new Module();
                     m.Id = addin.PluginKey.ToString();
                     m.Name = addin.PluginName;
-                    m.Order = addin.PluginKey;
+                    m.Order = addin.Order;
                     m.ClassName = addin.GetType().FullName;
-                   Module m2= addin.PluginTag as Module;
-                   if (m2 != null)
-                   {
-                       m.ParanetId = m2.Id;
-                       m2.ModuleType = "ModuleGroup";
+                    Module m2 = addin.PluginTag as Module;
+                    if (m2 != null)
+                    {
+                        m.ParanetId = m2.Id;
+                        m2.ModuleType = "ModuleGroup";
 
-                   }
-                   else
-                   {
-                       m.ParanetId = "G0";
-                   }
-                   m.Enable = addin.PluginEnabled;
-                   m.ModuleType = "Module";
-                   ds.Add(m);
-                   ds.Add(m2);
-                  
+                    }
+                    else
+                    {
+                        m.ParanetId = "G0";
+                    }
+                    m.Enable = addin.PluginEnabled;
+                    m.ModuleType = "Module";
+                    ds.Add(m);
+                    ds.Add(m1);
+                    ds.Add(m2);
+
                 }
-                addNodes(root.Nodes, ds.GetDataSet(), "G0");
+                addNodes(xTreeView1.Nodes, ds.GetDataSet(), "G-1");
                 xTreeView1.ExpandAll();
             }
         }
@@ -253,15 +258,15 @@ namespace CCMS.UI
             DataRow[] rows = treeDataSet.Tables[0].Select("paranetId='" + parentNodeID + "'", "MOrder ASC");//查找当前结点的所有子结点 
 
             foreach (DataRow row in rows)
-            {                 
-                int imageIndex = row["Enable"].ToString()==bool.TrueString ? this.addinEnabledImageIndex : this.addinDisabledImageIndex;
+            {
+                int imageIndex = row["Enable"].ToString() == bool.TrueString ? this.addinEnabledImageIndex : this.addinDisabledImageIndex;
                 string nodeText = string.Format("{0}", row["Name"].ToString());
                 TreeNode addinNode = new TreeNode(nodeText, imageIndex, imageIndex);
-                addinNode.Tag = row["Id"];              
-                collection.Add(addinNode);  
+                addinNode.Tag = row["Id"];
+                collection.Add(addinNode);
                 addNodes(addinNode.Nodes, treeDataSet, row["Id"].ToString());
             }
-        } 
+        }
         #endregion
     }
 

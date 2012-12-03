@@ -67,29 +67,30 @@ namespace CCMS.Plugin
         /// Author 作者
         /// </summary>
         string Author { get;}
+
+        int Order { get; }
+        string AppName { get; }
+        int AppOrder { get; }
     }
 
     public class PluginHelper
     {
-        public const string PluginSign1 = "Plugins.dll"; //所有的插件都以"Plugins.dll"结尾
-        public const string PluginSign2 = "HP.dll"; //所有的插件都以"Plugins.dll"结尾
-        public const string PluginSign3 = "SP.dll";
-        public const string PluginSign4 = "FS.dll";
+        public const string PluginSign1 = "Plugins.dll"; //所有的插件都以"Plugins.dll"结尾       
     }
     public class PluginComparer : IComparer<IPlugin>
     {
         public int Compare(IPlugin x, IPlugin y)
         {
             int result=0;
-            if (x.PluginKey > y.PluginKey)
+            if (x.Order > y.Order)
             {
                 result = 1;
             }
-            if (x.PluginKey < y.PluginKey)
+            if (x.Order < y.Order)
             {
                 result = -1;
             }
-            if (x.PluginKey == y.PluginKey)
+            if (x.Order == y.Order)
             {
                 result = 0;
             }

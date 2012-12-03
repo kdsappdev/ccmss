@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.MCCManger
 {
-    public partial class CustomerUserControl : CCMS.Plugin.AbstractPlugin
+    public partial class CustomerUserControl : Utils.BaseUserControl
     {
         public CustomerUserControl()
         {
@@ -19,6 +19,7 @@ namespace CCMS.Plugins.MCCManger
         {
             this._tag = new CCMS.UI.Module("G3", "汽车消费贷款管理", "", 2, "G0");
             this._pluginKey = 7;
+            this._order = 2;
             this._pluginName = "客户管理";
         }
         #endregion

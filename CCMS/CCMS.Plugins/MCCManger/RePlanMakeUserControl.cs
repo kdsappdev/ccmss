@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.MCCManger
 {
-    public partial class RePlanMakeUserControl : CCMS.Plugin.AbstractPlugin
+    public partial class RePlanMakeUserControl : Utils.BaseUserControl
     {
         public RePlanMakeUserControl()
         {
@@ -17,7 +17,7 @@ namespace CCMS.Plugins.MCCManger
         #region Plugin
         protected override void init()
         {
-            this._tag = new CCMS.UI.Module("G4", "还款计划管理", "", 8, "G3");
+            this._tag = new CCMS.UI.Module("G4", "还款计划管理", "", 3, "G3");
             this._pluginKey = 8;
             this._pluginName = "还款计划制作";
         }
