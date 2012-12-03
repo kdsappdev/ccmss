@@ -76,6 +76,12 @@
     <Compile Include="UI\AddinTreeView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RegForm.Designer.cs">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TreeDataSet.cs" />
     <Compile Include="UI\XTreeView.cs">
       <SubType>UserControl</SubType>

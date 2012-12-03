@@ -20,7 +20,7 @@ namespace CCMS
         }
 
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
-        {
+        {            
             MessageBox.Show(e.Exception.Message);
         }
 

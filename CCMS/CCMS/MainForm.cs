@@ -10,7 +10,7 @@ namespace CCMS
 {
     public partial class MainForm : Form, IApplication
     {
-        #region IForm
+        #region IApplication
         public CCMS.Plugin.IPluginManager pluginManager = null;
         public ToolStrip ToolMenu { get { return this.toolStrip1; } }
         public CCMS.Plugin.IPluginManager PluginManager { get { return pluginManager; } }
@@ -19,10 +19,10 @@ namespace CCMS
         public TreeView TreeViemModule { get { return null; } }
         public TabControl TabControl { get { return this.tabControl1; } }
         #endregion
+
         public MainForm()
         {
-            InitializeComponent();
-            init();
+            InitializeComponent();            
         }
         private void init()
         {
@@ -30,11 +30,7 @@ namespace CCMS
             this.notifyIcon1.Icon = this.Icon;
             pluginManager = new Plugin.PluginManager(this);
             pluginManager.LoadDefault(PluginHelper.PluginSign1);
-            addinTreeView1.AddinManagement = pluginManager;
-           
-           
-           // tvModule.ExpandAll();
-
+            addinTreeView2.AddinManagement = pluginManager;    
         }
 
        
@@ -65,5 +61,10 @@ namespace CCMS
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
         #endregion
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            init();
+        }
     }
 }
