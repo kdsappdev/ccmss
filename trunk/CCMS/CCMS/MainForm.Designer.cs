@@ -33,6 +33,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.系统YToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.注册产品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.检查新版本CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbLock = new System.Windows.Forms.ToolStripButton();
             this.tsbModifyPwd = new System.Windows.Forms.ToolStripButton();
@@ -44,7 +48,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.addinTreeView1 = new CCMS.UI.AddinTreeView();
+            this.addinTreeView2 = new CCMS.UI.AddinTreeView();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -57,7 +61,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.系统YToolStripMenuItem,
-            this.系统维护ToolStripMenuItem});
+            this.系统维护ToolStripMenuItem,
+            this.帮助HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(823, 25);
@@ -75,6 +80,34 @@
             this.系统维护ToolStripMenuItem.Name = "系统维护ToolStripMenuItem";
             this.系统维护ToolStripMenuItem.Size = new System.Drawing.Size(83, 21);
             this.系统维护ToolStripMenuItem.Text = "系统维护(&Z)";
+            // 
+            // 帮助HToolStripMenuItem
+            // 
+            this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.注册产品ToolStripMenuItem,
+            this.检查新版本CToolStripMenuItem,
+            this.关于ToolStripMenuItem});
+            this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.帮助HToolStripMenuItem.Text = "帮助(&H)";
+            // 
+            // 注册产品ToolStripMenuItem
+            // 
+            this.注册产品ToolStripMenuItem.Name = "注册产品ToolStripMenuItem";
+            this.注册产品ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.注册产品ToolStripMenuItem.Text = "注册产品(&R)";
+            // 
+            // 检查新版本CToolStripMenuItem
+            // 
+            this.检查新版本CToolStripMenuItem.Name = "检查新版本CToolStripMenuItem";
+            this.检查新版本CToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.检查新版本CToolStripMenuItem.Text = "检查新版本(&C)";
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Text = "关于(&A)";
             // 
             // toolStrip1
             // 
@@ -161,7 +194,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.addinTreeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.addinTreeView2);
             // 
             // splitContainer1.Panel2
             // 
@@ -179,18 +212,18 @@
             this.tabControl1.Size = new System.Drawing.Size(683, 451);
             this.tabControl1.TabIndex = 0;
             // 
-            // addinTreeView1
+            // addinTreeView2
             // 
-            this.addinTreeView1.AddinCatalogImageIndex = 0;
-            this.addinTreeView1.AddinDisabledImageIndex = 0;
-            this.addinTreeView1.AddinEnabledImageIndex = 0;
-            this.addinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addinTreeView1.ImageList = null;
-            this.addinTreeView1.Location = new System.Drawing.Point(0, 0);
-            this.addinTreeView1.Name = "addinTreeView1";
-            this.addinTreeView1.RootImageIndex = 0;
-            this.addinTreeView1.Size = new System.Drawing.Size(136, 451);
-            this.addinTreeView1.TabIndex = 0;
+            this.addinTreeView2.AddinCatalogImageIndex = 0;
+            this.addinTreeView2.AddinDisabledImageIndex = 0;
+            this.addinTreeView2.AddinEnabledImageIndex = 0;
+            this.addinTreeView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addinTreeView2.ImageList = null;
+            this.addinTreeView2.Location = new System.Drawing.Point(0, 0);
+            this.addinTreeView2.Name = "addinTreeView2";
+            this.addinTreeView2.RootImageIndex = 0;
+            this.addinTreeView2.Size = new System.Drawing.Size(136, 451);
+            this.addinTreeView2.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -206,6 +239,7 @@
             this.Name = "MainForm";
             this.Text = "4S综合管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -238,6 +272,11 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl1;
         private UI.AddinTreeView addinTreeView1;
+        private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 检查新版本CToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 注册产品ToolStripMenuItem;
+        private CCMS.UI.AddinTreeView addinTreeView2;
     }
 }
 

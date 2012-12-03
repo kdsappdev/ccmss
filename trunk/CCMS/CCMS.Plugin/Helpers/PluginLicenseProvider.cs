@@ -17,9 +17,9 @@ namespace CCMS.Helpers
             PluginLicense lic=  new PluginLicense("");
             if (instance != null)
             {
-                string ns = instance.GetType().AssemblyQualifiedName;
-                Type t = instance.GetType();
-                ns=t.Module.Name;
+                string ns = instance.GetType().Name;
+                
+               
                 if (nsList.Contains(ns))
                 {
                     lic = new PluginLicense(ns);
