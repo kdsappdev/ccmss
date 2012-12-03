@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace CCMS.UI
 {
-    public partial class RegForm : Form
-    {       
-        public RegForm()
+    public partial class AboutForm : Form
+    {
+        public AboutForm()
         {
             InitializeComponent();
         }
