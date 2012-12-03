@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.MCCManger
 {
-    public partial class BankRePlanUpateSelectUserControl : CCMS.Plugin.AbstractPlugin
+    public partial class BankRePlanUpateSelectUserControl : Utils.BaseUserControl
     {
         public BankRePlanUpateSelectUserControl()
         {
@@ -19,6 +19,7 @@ namespace CCMS.Plugins.MCCManger
         {
             this._tag = new CCMS.UI.Module("G5", "信货放款还款", "", 12, "G3");
             this._pluginKey = 13;
+            this._order = 2;
             this._pluginName = "银行还款登记";
         }
         #endregion

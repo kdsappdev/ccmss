@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.HMManger
 {
-    public partial class ExpiredSelectUserControl : CCMS.Plugin.AbstractPlugin
+    public partial class ExpiredSelectUserControl : Utils.BaseUserControl
     {
         public ExpiredSelectUserControl()
         {
@@ -19,6 +19,7 @@ namespace CCMS.Plugins.HMManger
         {
             this._tag = new CCMS.UI.Module("G2", "逾期情况", "", 4, "G1");
             this._pluginKey = 5;
+            this._order = 2;
             this._pluginName = "逾期查询";
         }
         #endregion

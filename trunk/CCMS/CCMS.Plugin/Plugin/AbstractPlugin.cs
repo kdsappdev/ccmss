@@ -5,10 +5,28 @@ using System.Windows.Forms;
  
 namespace CCMS.Plugin
 {
-    public  class AbstractPlugin : UserControl,IPlugin
+    public class AbstractPlugin : UserControl,IPlugin
     {
         #region IPlugin ÊôÐÔ
         protected object _tag;
+        protected int _order;
+        protected int _appOrder;
+
+        public virtual int AppOrder
+        {
+            get { return _appOrder; }
+            
+        }
+        public int Order
+        {
+            get { return _order; }          
+        }
+        protected string _appName;
+
+        public virtual string AppName
+        {
+            get { return _appName; }             
+        }
         protected IApplication _application = null;
         protected bool _enabled = true;
         protected int _pluginKey = 1;
@@ -16,7 +34,7 @@ namespace CCMS.Plugin
         protected string _description = "";
         protected string _version = "1.0.0.0";
         protected string _author = "¿×µÂË§";
-        public object PluginTag
+        public virtual object PluginTag
         {
             get
             {
@@ -27,7 +45,7 @@ namespace CCMS.Plugin
                 _tag = value;
             }
         }
-        public IApplication Application
+        public virtual IApplication Application
         {
             get
             {
@@ -38,7 +56,7 @@ namespace CCMS.Plugin
                 _application = value;
             }
         }
-        public bool PluginEnabled
+        public virtual bool PluginEnabled
         {
             get
             {

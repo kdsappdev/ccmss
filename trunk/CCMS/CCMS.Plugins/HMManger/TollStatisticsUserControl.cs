@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CCMS.Plugins.HMManger
 {
-    public partial class TollStatisticsUserControl :  CCMS.Plugin.AbstractPlugin
+    public partial class TollStatisticsUserControl : Utils.BaseUserControl
     {
         public TollStatisticsUserControl()
         {
@@ -19,6 +19,7 @@ namespace CCMS.Plugins.HMManger
         {
             this._tag = new CCMS.UI.Module("G1", "住房按揭管理", "", 0, "G0");
             this._pluginKey = 2;
+            this._order = 2;
             this._pluginName = "收费统计";
         }
         #endregion
