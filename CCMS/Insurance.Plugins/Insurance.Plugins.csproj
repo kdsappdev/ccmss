@@ -43,7 +43,6 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DataSource.cs" />
     <Compile Include="ICustomerManagement\InsuranceClientsRegister.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ICustomerManagement\InsuranceClientsRegister.Designer.cs">
       <DependentUpon>InsuranceClientsRegister.cs</DependentUpon>
