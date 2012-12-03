@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6BB4C4AB-00A9-404A-9D1F-08705EA6C7D2}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -48,85 +48,71 @@
   <ItemGroup>
     <Compile Include="DataSource.cs" />
     <Compile Include="HMManger\CustomerRegAndSelectUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HMManger\CustomerRegAndSelectUserControl.Designer.cs">
       <DependentUpon>CustomerRegAndSelectUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="HMManger\ExpiredRegUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HMManger\ExpiredRegUserControl.Designer.cs">
       <DependentUpon>ExpiredRegUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="HMManger\ExpiredSelectUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HMManger\ExpiredSelectUserControl.Designer.cs">
       <DependentUpon>ExpiredSelectUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="HMManger\SettleUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HMManger\SettleUserControl.Designer.cs">
       <DependentUpon>SettleUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="HMManger\TollStatisticsUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HMManger\TollStatisticsUserControl.Designer.cs">
       <DependentUpon>TollStatisticsUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\BankLendingUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\BankLendingUserControl.Designer.cs">
       <DependentUpon>BankLendingUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\BasicSettingUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\BasicSettingUserControl.Designer.cs">
       <DependentUpon>BasicSettingUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\BatchPranUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\BatchPranUserControl.Designer.cs">
       <DependentUpon>BatchPranUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\CustomerUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\CustomerUserControl.Designer.cs">
       <DependentUpon>CustomerUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\PayRegUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\PayRegUserControl.Designer.cs">
       <DependentUpon>PayRegUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\RePlanMakeUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\RePlanMakeUserControl.Designer.cs">
       <DependentUpon>RePlanMakeUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\RePlanUpateSelectUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\RePlanUpateSelectUserControl.Designer.cs">
       <DependentUpon>RePlanUpateSelectUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\BankBatchPranUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\BankBatchPranUserControl.Designer.cs">
       <DependentUpon>BankBatchPranUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MCCManger\BankRePlanRegSelectUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MCCManger\BankRePlanRegSelectUserControl.Designer.cs">
       <DependentUpon>BankRePlanRegSelectUserControl.cs</DependentUpon>
@@ -139,7 +125,6 @@
       <DependentUpon>ITextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\BaseUserControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Utils\ConstSql.cs" />
   </ItemGroup>
