@@ -106,6 +106,10 @@
       <Project>{3757F0DB-2ABC-4836-8B98-2D2B63D72DA2}</Project>
       <Name>Insurance.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Menu.Plugins\Menu.Help.Plugins.csproj">
+      <Project>{0ABD15CC-10A9-4DCB-A177-1C1344C18444}</Project>
+      <Name>Menu.Help.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

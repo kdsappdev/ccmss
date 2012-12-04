@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using CCMS.Plugin;
 namespace CCMS
-{
+{   
     public partial class MainForm : Form, IApplication
     {
         #region IApplication
@@ -22,7 +22,8 @@ namespace CCMS
 
         public MainForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            this.Text = this.Text;
         }
         private void init()
         {
@@ -30,12 +31,9 @@ namespace CCMS
             this.notifyIcon1.Icon = this.Icon;
             pluginManager = new Plugin.PluginManager(this);
             pluginManager.LoadDefault(PluginHelper.PluginSign1);
-            addinTreeView2.AddinManagement = pluginManager;    
+            addinTreeView1.AddinManagement = pluginManager;   
         }
-
-       
-
-
+        
         #region 主窗口关闭，任务栏
         private void tsbExit_Click(object sender, EventArgs e)
         {
@@ -65,6 +63,6 @@ namespace CCMS
         private void MainForm_Load(object sender, EventArgs e)
         {
             init();
-        }
+        }        
     }
 }
