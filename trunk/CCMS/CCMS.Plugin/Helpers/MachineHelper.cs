@@ -32,6 +32,19 @@ namespace CCMS.Helpers
 
             return strArr;
         }
+        static string mac = "";
+        public static string GetMacAddress2()
+        {
+            if (string.IsNullOrEmpty(mac))
+            {
+                IList<string> lt = GetMacAddress();
+                if (lt != null && lt.Count > 0)
+                {
+                    mac = lt[0];
+                }
+            }
+            return mac;
+        }
         #endregion
 
         public static bool IsCurrentMachine(string macAddress)
