@@ -6,23 +6,25 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Insurance.Plugins.IBusAcceptance
+namespace Insurance.Plugins.IInstallments
 {
-    public partial class InsuranceRenewalLevel : Utils.BaseUserControl
+    public partial class DataEntry : Utils.BaseUserControl
     {
         #region Plugin
         protected override void init()
         {
-            this._tag = new CCMS.UI.Module("G8", "保险业务受理", "", 2, "G6");
-            this._pluginKey = 23;
+            this._tag = new CCMS.UI.Module("G10", "保险分期付款", "", 4, "G6");
+            this._pluginKey = 30;
             this._order = 1;
-            this._pluginName = "保险续保登记";
+            this._pluginName = "资料录入";
         }
         #endregion
-
-        public InsuranceRenewalLevel()
+        public DataEntry()
         {
             InitializeComponent();
         }
+
+
+
     }
 }

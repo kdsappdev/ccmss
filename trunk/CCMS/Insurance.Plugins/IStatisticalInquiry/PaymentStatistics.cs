@@ -6,20 +6,20 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Insurance.Plugins.ICustomerManagement
+namespace Insurance.Plugins.IStatisticalInquiry
 {
-    public partial class CustomerDataModification :Utils.BaseUserControl
+    public partial class PaymentStatistics : Utils.BaseUserControl
     {
         #region Plugin
         protected override void init()
         {
-            this._tag = new CCMS.UI.Module("G7", "保险客户管理", "", 1, "G6");
-            this._pluginKey = 22;
+            this._tag = new CCMS.UI.Module("G11", "信息统计查询", "", 5, "G6");
+            this._pluginKey = 38;
             this._order = 2;
-            this._pluginName = "客户资料修改";
+            this._pluginName = "缴费统计";
         }
         #endregion
-        public CustomerDataModification()
+        public PaymentStatistics()
         {
             InitializeComponent();
         }

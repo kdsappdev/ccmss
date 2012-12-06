@@ -42,11 +42,35 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DataSource.cs" />
+    <Compile Include="IBusAcceptance\DangerousConditionOfRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBusAcceptance\DangerousConditionOfRegistration.Designer.cs">
+      <DependentUpon>DangerousConditionOfRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBusAcceptance\InsurancePremium.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBusAcceptance\InsurancePremium.Designer.cs">
+      <DependentUpon>InsurancePremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBusAcceptance\InsuranceReceiptsInAdvanceTheSituation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBusAcceptance\InsuranceReceiptsInAdvanceTheSituation.Designer.cs">
+      <DependentUpon>InsuranceReceiptsInAdvanceTheSituation.cs</DependentUpon>
+    </Compile>
     <Compile Include="IBusAcceptance\InsuranceRenewalLevel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IBusAcceptance\InsuranceRenewalLevel.Designer.cs">
       <DependentUpon>InsuranceRenewalLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBusAcceptance\ISettlement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBusAcceptance\ISettlement.Designer.cs">
+      <DependentUpon>ISettlement.cs</DependentUpon>
     </Compile>
     <Compile Include="ICustomerManagement\CustomerDataModification.cs">
       <SubType>UserControl</SubType>
@@ -54,11 +78,119 @@
     <Compile Include="ICustomerManagement\CustomerDataModification.Designer.cs">
       <DependentUpon>CustomerDataModification.cs</DependentUpon>
     </Compile>
+    <Compile Include="ICustomerManagement\CustomerInformationSupplements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ICustomerManagement\CustomerInformationSupplements.Designer.cs">
+      <DependentUpon>CustomerInformationSupplements.cs</DependentUpon>
+    </Compile>
     <Compile Include="ICustomerManagement\InsuranceClientsRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ICustomerManagement\InsuranceClientsRegister.Designer.cs">
       <DependentUpon>InsuranceClientsRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICustomerManagement\OwnersChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ICustomerManagement\OwnersChange.Designer.cs">
+      <DependentUpon>OwnersChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\AnApproval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\AnApproval.Designer.cs">
+      <DependentUpon>AnApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\DataEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\DataEntry.Designer.cs">
+      <DependentUpon>DataEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\OverdueQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\OverdueQuery.Designer.cs">
+      <DependentUpon>OverdueQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\PastDueOnStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\PastDueOnStatistics.Designer.cs">
+      <DependentUpon>PastDueOnStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\ReceivedTheDownPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\ReceivedTheDownPayment.Designer.cs">
+      <DependentUpon>ReceivedTheDownPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\Repayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\Repayment.Designer.cs">
+      <DependentUpon>Repayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInstallments\TwoApproval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IInstallments\TwoApproval.Designer.cs">
+      <DependentUpon>TwoApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOverdueQueries\InsuranceOverdueQueries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IOverdueQueries\InsuranceOverdueQueries.Designer.cs">
+      <DependentUpon>InsuranceOverdueQueries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPayment\PayBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IPayment\PayBank.Designer.cs">
+      <DependentUpon>PayBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPayment\PaymentOfInsuranceCompanies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IPayment\PaymentOfInsuranceCompanies.Designer.cs">
+      <DependentUpon>PaymentOfInsuranceCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\ClearingStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\ClearingStatistics.Designer.cs">
+      <DependentUpon>ClearingStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\InsurancePremium.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\InsurancePremium.Designer.cs">
+      <DependentUpon>InsurancePremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\InsuranceRepaymentStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\InsuranceRepaymentStatistics.Designer.cs">
+      <DependentUpon>InsuranceRepaymentStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\OnInsuranceStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\OnInsuranceStatistics.Designer.cs">
+      <DependentUpon>OnInsuranceStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\PaymentStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\PaymentStatistics.Designer.cs">
+      <DependentUpon>PaymentStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\SectorInsuranceStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IStatisticalInquiry\SectorInsuranceStatistics.Designer.cs">
+      <DependentUpon>SectorInsuranceStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\BaseUserControl.cs">
@@ -71,6 +203,83 @@
       <Project>{91D522C5-8926-4CAA-A331-DE9E87995D53}</Project>
       <Name>CCMS.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IBusAcceptance\DangerousConditionOfRegistration.resx">
+      <DependentUpon>DangerousConditionOfRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBusAcceptance\InsurancePremium.resx">
+      <DependentUpon>InsurancePremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBusAcceptance\InsuranceReceiptsInAdvanceTheSituation.resx">
+      <DependentUpon>InsuranceReceiptsInAdvanceTheSituation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBusAcceptance\InsuranceRenewalLevel.resx">
+      <DependentUpon>InsuranceRenewalLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBusAcceptance\ISettlement.resx">
+      <DependentUpon>ISettlement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICustomerManagement\CustomerDataModification.resx">
+      <DependentUpon>CustomerDataModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICustomerManagement\CustomerInformationSupplements.resx">
+      <DependentUpon>CustomerInformationSupplements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICustomerManagement\InsuranceClientsRegister.resx">
+      <DependentUpon>InsuranceClientsRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICustomerManagement\OwnersChange.resx">
+      <DependentUpon>OwnersChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\AnApproval.resx">
+      <DependentUpon>AnApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\DataEntry.resx">
+      <DependentUpon>DataEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\OverdueQuery.resx">
+      <DependentUpon>OverdueQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\PastDueOnStatistics.resx">
+      <DependentUpon>PastDueOnStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\ReceivedTheDownPayment.resx">
+      <DependentUpon>ReceivedTheDownPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\Repayment.resx">
+      <DependentUpon>Repayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IInstallments\TwoApproval.resx">
+      <DependentUpon>TwoApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IOverdueQueries\InsuranceOverdueQueries.resx">
+      <DependentUpon>InsuranceOverdueQueries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPayment\PayBank.resx">
+      <DependentUpon>PayBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPayment\PaymentOfInsuranceCompanies.resx">
+      <DependentUpon>PaymentOfInsuranceCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\ClearingStatistics.resx">
+      <DependentUpon>ClearingStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\InsurancePremium.resx">
+      <DependentUpon>InsurancePremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\InsuranceRepaymentStatistics.resx">
+      <DependentUpon>InsuranceRepaymentStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\OnInsuranceStatistics.resx">
+      <DependentUpon>OnInsuranceStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\PaymentStatistics.resx">
+      <DependentUpon>PaymentStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IStatisticalInquiry\SectorInsuranceStatistics.resx">
+      <DependentUpon>SectorInsuranceStatistics.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

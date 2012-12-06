@@ -1,6 +1,6 @@
 ﻿namespace Insurance.Plugins.ICustomerManagement
 {
-    partial class CustomerDataModification
+    partial class OwnersChange
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDataModification));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OwnersChange));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -130,7 +130,7 @@
             this.tsbExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(605, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(549, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -153,7 +153,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(605, 484);
+            this.tabControl1.Size = new System.Drawing.Size(549, 484);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -162,7 +162,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(597, 459);
+            this.tabPage1.Size = new System.Drawing.Size(541, 459);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按照姓名查询";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.29493F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.70507F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(591, 453);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(535, 453);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -198,16 +198,16 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(585, 31);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(529, 31);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(147, 0);
+            this.label3.Location = new System.Drawing.Point(133, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 31);
+            this.label3.Size = new System.Drawing.Size(51, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "姓名：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,17 +215,17 @@
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(210, 5);
+            this.textBox3.Location = new System.Drawing.Point(190, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(101, 21);
+            this.textBox3.Size = new System.Drawing.Size(90, 21);
             this.textBox3.TabIndex = 1;
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(317, 4);
+            this.button3.Location = new System.Drawing.Point(286, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 23);
+            this.button3.Size = new System.Drawing.Size(62, 23);
             this.button3.TabIndex = 2;
             this.button3.Text = "查询";
             this.button3.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(3, 40);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(585, 410);
+            this.dataGridView3.Size = new System.Drawing.Size(529, 410);
             this.dataGridView3.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn12
@@ -314,7 +314,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 21);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(597, 459);
+            this.tabPage2.Size = new System.Drawing.Size(595, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "按照牌照号查询";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -331,7 +331,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.29493F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.70507F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 453);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(589, 437);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -350,7 +350,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(585, 31);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(583, 30);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -359,7 +359,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(147, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 31);
+            this.label1.Size = new System.Drawing.Size(57, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "牌照号：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -367,17 +367,17 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(210, 5);
+            this.textBox1.Location = new System.Drawing.Point(210, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 21);
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(317, 4);
+            this.button1.Location = new System.Drawing.Point(316, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 23);
+            this.button1.Size = new System.Drawing.Size(68, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "查询";
             this.button1.UseVisualStyleBackColor = true;
@@ -399,10 +399,10 @@
             this.Column10,
             this.Column11});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(585, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(583, 395);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -466,7 +466,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 21);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(597, 459);
+            this.tabPage6.Size = new System.Drawing.Size(595, 443);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "按照信贷单号查询";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -483,7 +483,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.29493F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.70507F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(591, 453);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(589, 437);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -502,7 +502,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(585, 31);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(583, 30);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label2
@@ -511,7 +511,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(138, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 31);
+            this.label2.Size = new System.Drawing.Size(65, 30);
             this.label2.TabIndex = 0;
             this.label2.Text = "信贷单号：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -519,7 +519,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(209, 5);
+            this.textBox2.Location = new System.Drawing.Point(209, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(101, 21);
             this.textBox2.TabIndex = 1;
@@ -527,7 +527,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(316, 4);
+            this.button2.Location = new System.Drawing.Point(316, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(69, 23);
             this.button2.TabIndex = 2;
@@ -551,10 +551,10 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 40);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 39);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(585, 410);
+            this.dataGridView2.Size = new System.Drawing.Size(583, 395);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -618,7 +618,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 21);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(597, 459);
+            this.tabPage7.Size = new System.Drawing.Size(595, 443);
             this.tabPage7.TabIndex = 3;
             this.tabPage7.Text = "按照车架号查询";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -635,7 +635,7 @@
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.29493F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.70507F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(591, 453);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(589, 437);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
             // tableLayoutPanel12
@@ -654,7 +654,7 @@
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(585, 31);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(583, 30);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // label6
@@ -663,7 +663,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(147, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 31);
+            this.label6.Size = new System.Drawing.Size(57, 30);
             this.label6.TabIndex = 0;
             this.label6.Text = "车架号：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -671,17 +671,17 @@
             // textBox6
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(210, 5);
+            this.textBox6.Location = new System.Drawing.Point(210, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(101, 21);
+            this.textBox6.Size = new System.Drawing.Size(100, 21);
             this.textBox6.TabIndex = 1;
             // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(317, 4);
+            this.button6.Location = new System.Drawing.Point(316, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(69, 23);
+            this.button6.Size = new System.Drawing.Size(68, 23);
             this.button6.TabIndex = 2;
             this.button6.Text = "查询";
             this.button6.UseVisualStyleBackColor = true;
@@ -703,10 +703,10 @@
             this.dataGridViewTextBoxColumn54,
             this.dataGridViewTextBoxColumn55});
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 40);
+            this.dataGridView6.Location = new System.Drawing.Point(3, 39);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowTemplate.Height = 23;
-            this.dataGridView6.Size = new System.Drawing.Size(585, 410);
+            this.dataGridView6.Size = new System.Drawing.Size(583, 395);
             this.dataGridView6.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn45
@@ -764,10 +764,14 @@
             this.dataGridViewTextBoxColumn55.HeaderText = "车架号";
             this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
             // 
-            // CustomerDataModification
+            // OwnersChange
             // 
-            this.Name = "CustomerDataModification";
-            this.Size = new System.Drawing.Size(603, 423);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "OwnersChange";
+            this.Size = new System.Drawing.Size(549, 509);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -792,6 +796,7 @@
             this.tableLayoutPanel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

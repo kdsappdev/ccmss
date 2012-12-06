@@ -8,18 +8,18 @@ using System.Windows.Forms;
 
 namespace Insurance.Plugins.ICustomerManagement
 {
-    public partial class InsuranceClientsRegister : Utils.BaseUserControl
+    public partial class OwnersChange : Utils.BaseUserControl
     {
         #region Plugin
         protected override void init()
         {
             this._tag = new CCMS.UI.Module("G7", "保险客户管理", "", 1, "G6");
-            this._pluginKey = 21;
-            this._order = 1;
-            this._pluginName = "保险客户登记";
+            this._pluginKey = 44;
+            this._order = 3;
+            this._pluginName = "车主变更";
         }
         #endregion
-        public InsuranceClientsRegister()
+        public OwnersChange()
         {
             InitializeComponent();
         }
