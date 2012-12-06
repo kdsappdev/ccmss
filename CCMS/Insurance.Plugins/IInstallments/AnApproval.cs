@@ -6,20 +6,20 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Insurance.Plugins.ICustomerManagement
+namespace Insurance.Plugins.IInstallments
 {
-    public partial class CustomerDataModification :Utils.BaseUserControl
+    public partial class AnApproval : Utils.BaseUserControl
     {
         #region Plugin
         protected override void init()
         {
-            this._tag = new CCMS.UI.Module("G7", "保险客户管理", "", 1, "G6");
-            this._pluginKey = 22;
+            this._tag = new CCMS.UI.Module("G10", "保险分期付款", "", 4, "G6");
+            this._pluginKey = 31;
             this._order = 2;
-            this._pluginName = "客户资料修改";
+            this._pluginName = "一级审批";
         }
         #endregion
-        public CustomerDataModification()
+        public AnApproval()
         {
             InitializeComponent();
         }

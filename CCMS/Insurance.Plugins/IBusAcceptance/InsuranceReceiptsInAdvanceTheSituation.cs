@@ -8,19 +8,18 @@ using System.Windows.Forms;
 
 namespace Insurance.Plugins.IBusAcceptance
 {
-    public partial class InsuranceRenewalLevel : Utils.BaseUserControl
+    public partial class InsuranceReceiptsInAdvanceTheSituation : Utils.BaseUserControl
     {
         #region Plugin
         protected override void init()
         {
             this._tag = new CCMS.UI.Module("G8", "保险业务受理", "", 2, "G6");
-            this._pluginKey = 23;
-            this._order = 1;
-            this._pluginName = "保险续保登记";
+            this._pluginKey = 27;
+            this._order = 5;
+            this._pluginName = "保险预收情况";
         }
         #endregion
-
-        public InsuranceRenewalLevel()
+        public InsuranceReceiptsInAdvanceTheSituation()
         {
             InitializeComponent();
         }
