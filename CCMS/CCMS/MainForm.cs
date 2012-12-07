@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using CCMS.Plugin;
+using CCMS.Helpers;
 namespace CCMS
 {   
     public partial class MainForm : Form, IApplication
@@ -20,18 +21,28 @@ namespace CCMS
         public TabControl TabControl { get { return this.tabControl1; } }
         #endregion
 
+        #region 权限信息
+        
+        #endregion
+
         public MainForm()
         {
             InitializeComponent();
+            addinTreeView1.Appliction = this;
             this.Text = this.Text;
         }
+        
         private void init()
         {
             this.notifyIcon1.Text = this.Text;
             this.notifyIcon1.Icon = this.Icon;
             pluginManager = new Plugin.PluginManager(this);
-            pluginManager.LoadDefault(PluginHelper.PluginSign1);
-            addinTreeView1.AddinManagement = pluginManager;   
+            //pluginManager.LoadAssembly(PluginHelper.PluginSign1);
+            //pluginManager.LoadDefault(PluginHelper.PluginSign1);            
+            addinTreeView1.Modules = PermissionHelper.Instance.Modules;
+            addinTreeView1.Functions = PermissionHelper.Instance.Functions;
+            addinTreeView1.LoadTree();
+            addinTreeView1.PluginType = pluginManager.LoadType(PluginHelper.PluginSign1);   
         }
         
         #region 主窗口关闭，任务栏
