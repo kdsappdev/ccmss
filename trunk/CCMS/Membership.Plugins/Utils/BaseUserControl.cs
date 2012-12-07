@@ -10,8 +10,9 @@ namespace Membership.Plugins.Utils
         {
             _author = "王超";
             _appOrder = 3;
-            _appKey = 6;
+            _appKey = 10;
             _appName = "会员管理";
+            
         }
     }
 }
