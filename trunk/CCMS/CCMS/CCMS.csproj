@@ -64,8 +64,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +114,10 @@
     <ProjectReference Include="..\Menu.Plugins\Menu.Help.Plugins.csproj">
       <Project>{0ABD15CC-10A9-4DCB-A177-1C1344C18444}</Project>
       <Name>Menu.Help.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\个人资料\孔德帅毕业设计\孔德帅毕业设计\Permissions\Permissions\Permissions.csproj">
+      <Project>{6F0800B5-058A-4B0F-AE9E-7A0F82BE2A0A}</Project>
+      <Name>Permissions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

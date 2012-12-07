@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
+using CCMS.Helpers;
 namespace CCMS
 {
     static class Program
@@ -12,15 +12,20 @@ namespace CCMS
         [STAThread]
         static void Main()
         {
+
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm());
+            if (PermissionHelper.Instance.IsLogin)
+            {
+                Application.Run(new MainForm());
+            }
         }
 
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
-        {            
+        {
             MessageBox.Show(e.Exception.Message);
         }
 
