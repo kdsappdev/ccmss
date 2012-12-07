@@ -26,6 +26,7 @@ namespace CCMS.Plugin
         #region 属性
         private IApplication _application = null;
         private IDictionary<int, IPlugin> _dicPlugin = new Dictionary<int, IPlugin>();
+        private IDictionary<string, Type> _dicPluginType = new Dictionary<string, Type>();
         private bool _copyToMemory = true;
         public IApplication Application
         {
@@ -91,10 +92,21 @@ namespace CCMS.Plugin
             this.pluginSign = pluginSign;
             LoadAllPlugins(AppDomain.CurrentDomain.BaseDirectory, true, this.pluginSign);
         }
-        public void LoadAllPlugins(string pluginFolderPath, bool searchChildFolder, string pluginSign)
+        public IList<Type> LoadType( string pluginSign)
+        {
+            return LoadType(AppDomain.CurrentDomain.BaseDirectory, true, this.pluginSign);
+        }
+        public IList<Type> LoadType(string pluginFolderPath, bool searchChildFolder, string pluginSign)
         {
             TypeLoadConfig config = new TypeLoadConfig(CopyToMemory, false, pluginSign);
             IList<Type> pluginTypeList = ReflectionHelper.LoadDerivedType(typeof(IPlugin), pluginFolderPath, searchChildFolder, config);
+         
+            return pluginTypeList;
+        }
+        public void LoadAllPlugins(string pluginFolderPath, bool searchChildFolder, string pluginSign)
+        {
+
+            IList<Type> pluginTypeList = LoadType(pluginFolderPath, searchChildFolder, pluginSign);
             List<IPlugin> pluginList = new List<IPlugin>();
             for (int i = 0; i < pluginTypeList.Count; i++)
             {
@@ -188,6 +200,18 @@ namespace CCMS.Plugin
                 plugin = _dicPlugin[pluginKey];
             }
             return plugin;
+        }
+        #endregion
+
+        #region 通过类名获取类型
+        public Type GetPluginType(string className)
+        {
+            Type type = null;
+            if (_dicPluginType.ContainsKey(className))
+            {
+                type = _dicPluginType[className];
+            }
+            return type;
         }
         #endregion
 

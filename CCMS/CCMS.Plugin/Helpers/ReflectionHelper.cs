@@ -67,7 +67,64 @@ namespace CCMS.Helpers
         }
         #endregion
 
+
+        #region LoadAssembly
+        public static void LoadDerivedTypeInAllFolder(string folderPath, TypeLoadConfig config)
+        {
+            ReflectionHelper.LoadAssemblyInOneFolder(folderPath, config);
+            string[] folders = Directory.GetDirectories(folderPath);
+            if (folders != null)
+            {
+                foreach (string nextFolder in folders)
+                {
+                    ReflectionHelper.LoadAssemblyInOneFolder(nextFolder, config);
+                }
+            }
+        }
+        public static void LoadAssemblyInOneFolder(string folderPath, TypeLoadConfig config)
+        {
+            string[] files = Directory.GetFiles(folderPath);
+            foreach (string file in files)
+            {
+                if (config.TargetFilePostfix != null)
+                {
+                    if (!file.EndsWith(config.TargetFilePostfix))
+                    {
+                        continue;
+                    }
+                }
+
+                Assembly asm = null;
+
+                #region Asm 加载程序集到内存中
+                try
+                {
+                    if (config.CopyToMemory)
+                    {
+                        byte[] addinStream = FileHelper.ReadFileReturnBytes(file);
+                        asm = Assembly.Load(addinStream);
+                    }
+                    else
+                    {
+                        asm = Assembly.LoadFrom(file);
+                    }
+                }
+                catch
+                {
+
+                }
+
+                if (asm == null)
+                {
+                    continue;
+                }
+                #endregion
+            }
+        }
+        #endregion
+
         #region LoadDerivedTypeInOneFolder
+
         private static void LoadDerivedTypeInOneFolder(Type baseType, IList<Type> derivedTypeList, string folderPath, TypeLoadConfig config)
         {
             string[] files = Directory.GetFiles(folderPath);
