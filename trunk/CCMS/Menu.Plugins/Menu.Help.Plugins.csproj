@@ -38,7 +38,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About\AboutPlugin.cs" />
     <Compile Include="BasePlugin.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\AutoUpdater.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\CommonUnitity.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\Config.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\ConstFile.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\DownloadFileInfo.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\IAutoUpdater.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\LocalFile.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\RemoteFile.cs" />
+    <Compile Include="CheckUpdate\AutoUpdateHelper\UpdateFileList.cs" />
+    <Compile Include="CheckUpdate\CheckUpdatePlugin.cs" />
+    <Compile Include="CheckUpdate\DownloadConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckUpdate\DownloadConfirm.designer.cs">
+      <DependentUpon>DownloadConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckUpdate\DownloadProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckUpdate\DownloadProgress.designer.cs">
+      <DependentUpon>DownloadProgress.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegProduct\RegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -49,6 +78,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckUpdate\DownloadConfirm.resx">
+      <DependentUpon>DownloadConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckUpdate\DownloadProgress.resx">
+      <DependentUpon>DownloadProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegProduct\RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -59,6 +100,9 @@
       <Project>{91D522C5-8926-4CAA-A331-DE9E87995D53}</Project>
       <Name>CCMS.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CheckUpdate\Autoupdater.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
