@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
 using CCMS.Plugin;
-
+using Permissions.Entity;
 namespace CCMS.UI
 {
     /// <summary>
@@ -33,26 +33,24 @@ namespace CCMS.UI
             TreeNode node = xTreeView1.CurrentNode;
             if (node.Tag != null)
             {
-                int tag = -1;
-                if (int.TryParse(node.Tag.ToString(), out tag))
-                {
-                    IPlugin plugin = addinMgr.GetPlugin(tag);
-                    if (plugin != null)
-                    {
-                        TabPage tp = new TabPage(plugin.PluginName);
-                        IPlugin p = (IPlugin)Activator.CreateInstance(plugin.GetType());
-                        p.Application = plugin.Application;
+                string tag = node.Tag as string;
+                 if(!string.IsNullOrEmpty(tag)&&dic.ContainsKey(tag))
+                 {
+                        TabPage tp = new TabPage(node.Text);
+                        
+                        IPlugin p = Activator.CreateInstance(dic[tag]) as IPlugin;
+                        p.Application = appliction;
                         UserControl uc = p as UserControl;
                         if (uc != null)
                         {
                             uc.Dock = DockStyle.Fill;
                             tp.Controls.Add(uc);
-                            plugin.Application.TabControl.Controls.Add(tp);
-                            plugin.Application.TabControl.SelectedTab = tp;
+                            appliction.TabControl.Controls.Add(tp);
+                            appliction.TabControl.SelectedTab = tp;
                         }
 
                     }
-                }
+                
             }
         }
 
@@ -268,11 +266,97 @@ namespace CCMS.UI
             }
         }
         #endregion
+
+        #region ÖØÐÂÌî³ä
+        public void LoadTree()
+        {
+            this.xTreeView1.Nodes.Clear();
+
+            GenNode(xTreeView1.Nodes,"0", modules, functions);
+            
+        }
+        private IList<Type> pluginType = null;
+        private Dictionary<string, Type> dic = new Dictionary<string, Type>();
+        public IList<Type> PluginType
+        {
+            set {
+                pluginType = value;
+                dic.Clear();
+                if (pluginType != null)
+                {
+                    foreach (Type t in pluginType)
+                    {
+                        if (!dic.ContainsKey(t.FullName))
+                        {
+                            dic.Add(t.FullName, t);
+                        }
+                    }
+                }
+            }
+        }
+        private IApplication appliction = null;
+
+        public IApplication Appliction
+        {            
+            set { appliction = value; }
+        }
+        private IList modules = null;
+
+        public IList Modules
+        {           
+            set { modules = value; }
+        }
+        private IList functions = null;
+
+        public IList Functions
+        {           
+            set { functions = value; }
+        }
+        protected bool GenNode(TreeNodeCollection TargetNode, string id, IList Modules, IList Functions)
+        {
+            bool HaveChildModule = false;
+            bool HaveChildFunction = false;
+            foreach (Sys_FuntionInfo function in Functions)
+            {
+                if (function.Module_Id == Int32.Parse(id) && function.GN_Close.Equals(0) && function.GN_SFXS.Equals(0))
+                {
+                    HaveChildFunction = true;
+                    TreeNode node = new TreeNode();
+                    node.Text = function.GN_M.Trim();
+                    node.Tag = function.GN_DZ.ToString();
+
+                    TargetNode.Add(node);
+                }
+            }
+            foreach (Sys_ModuleInfo module in Modules)
+            {
+                if (module.MK_FMkId == Int32.Parse(id) && module.MK_Close.Equals(0))
+                {
+                    TreeNode node = new TreeNode();
+                    node.Text = module.MK_M.Trim();
+                    node.Tag = "";
+                    
+                    if (GenNode(node.Nodes,module.Id.ToString(), Modules, Functions))
+                    {
+                        HaveChildModule = true;
+                        TargetNode.Add(node);
+                    }
+                }
+            }
+           
+            return HaveChildModule || HaveChildFunction;
+        }
+        #endregion
     }
 
     public interface IAddinTreeView
     {
+        IApplication Appliction { set; }
         IPluginManager AddinManagement { set; }
+        IList Modules {set;}
+        IList Functions{set;}
+        IList<Type> PluginType { set; }
+         void LoadTree();
     }
 
     public delegate void CBAddinStateChanged(int addinKey);

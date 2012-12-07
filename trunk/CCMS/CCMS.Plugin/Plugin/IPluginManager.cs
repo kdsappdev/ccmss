@@ -84,6 +84,9 @@ namespace CCMS.Plugin
         bool ContainsPlugin(int pluginKey);       
         #endregion
 
+        IList<Type> LoadType(string pluginSign);
+        Type GetPluginType(string className);
+
         #endregion
 
         #region 事件 插件改变后出发       
