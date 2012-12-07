@@ -14,9 +14,9 @@ namespace Insurance.Plugins.IOverdueQueries
         #region Plugin
         protected override void init()
         {
-            this._tag = new CCMS.UI.Module("G6", "保险逾期查询", "", 2, "G0");
+            this._tag = new CCMS.UI.Module("G13", "保险逾期查询", "", 6, "G6");
             this._pluginKey = 43;
-            this._order = 6;
+            this._order = 0;
             this._pluginName = "保险逾期查询";
         }
         #endregion
