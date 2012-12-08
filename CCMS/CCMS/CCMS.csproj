@@ -96,6 +96,13 @@
   <ItemGroup>
     <Content Include="dll\log4net.dll" />
     <Content Include="Image\cat6.ico" />
+    <Content Include="Image\m01_0021.gif" />
+    <Content Include="Image\module.gif" />
+    <Content Include="Image\module_select.gif" />
+    <Content Include="Image\new_04.gif" />
+    <Content Include="Image\new_17.gif" />
+    <Content Include="Image\new_21a.gif" />
+    <Content Include="Image\ReadOnly.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -31,6 +31,7 @@ namespace CCMS.UI
         void xTreeView1_NodeSelected(object sender, TreeViewEventArgs e)
         {
             TreeNode node = xTreeView1.CurrentNode;
+            node.SelectedImageIndex = selectedImageIndex;
             if (node.Tag != null)
             {
                 string tag = node.Tag as string;
@@ -84,6 +85,14 @@ namespace CCMS.UI
             }
         }
         #endregion
+
+        int selectedImageIndex = 0;
+
+        public int SelectedImageIndex
+        {
+            get { return selectedImageIndex; }
+            set { selectedImageIndex = value; }
+        }
 
         #region RootImageIndex
         private int rootImageIndex = 0;
