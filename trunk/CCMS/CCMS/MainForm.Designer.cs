@@ -42,9 +42,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.splitContainer1 = new CCMS.UI.SplitContainerEx();
             this.addinTreeView1 = new CCMS.UI.AddinTreeView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -153,6 +154,13 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "module.gif");
+            this.imageList1.Images.SetKeyName(1, "module_select.gif");
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -162,13 +170,30 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.addinTreeView1);
+            this.splitContainer1.Panel1MinSize = 0;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
+            this.splitContainer1.Panel2MinSize = 0;
             this.splitContainer1.Size = new System.Drawing.Size(823, 451);
             this.splitContainer1.SplitterDistance = 136;
+            this.splitContainer1.SplitterWidth = 9;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // addinTreeView1
+            // 
+            this.addinTreeView1.AddinCatalogImageIndex = 0;
+            this.addinTreeView1.AddinDisabledImageIndex = 0;
+            this.addinTreeView1.AddinEnabledImageIndex = 1;
+            this.addinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addinTreeView1.ImageList = this.imageList1;
+            this.addinTreeView1.Location = new System.Drawing.Point(0, 0);
+            this.addinTreeView1.Name = "addinTreeView1";
+            this.addinTreeView1.RootImageIndex = 0;
+            this.addinTreeView1.SelectedImageIndex = 1;
+            this.addinTreeView1.Size = new System.Drawing.Size(136, 451);
+            this.addinTreeView1.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -176,21 +201,8 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(683, 451);
+            this.tabControl1.Size = new System.Drawing.Size(678, 451);
             this.tabControl1.TabIndex = 0;
-            // 
-            // addinTreeView1
-            // 
-            this.addinTreeView1.AddinCatalogImageIndex = 0;
-            this.addinTreeView1.AddinDisabledImageIndex = 0;
-            this.addinTreeView1.AddinEnabledImageIndex = 0;
-            this.addinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addinTreeView1.ImageList = null;
-            this.addinTreeView1.Location = new System.Drawing.Point(0, 0);
-            this.addinTreeView1.Name = "addinTreeView1";
-            this.addinTreeView1.RootImageIndex = 0;
-            this.addinTreeView1.Size = new System.Drawing.Size(136, 451);
-            this.addinTreeView1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -236,9 +248,10 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private CCMS.UI.SplitContainerEx splitContainer1;
         private System.Windows.Forms.TabControl tabControl1;
         private CCMS.UI.AddinTreeView addinTreeView1;
+        private System.Windows.Forms.ImageList imageList1;
         
     }
 }

@@ -79,6 +79,12 @@
     <Compile Include="UI\AddinTreeView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\SplitContainerEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SplitContainerEx.designer.cs">
+      <DependentUpon>SplitContainerEx.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TreeDataSet.cs" />
     <Compile Include="UI\XTreeView.cs">
       <SubType>UserControl</SubType>

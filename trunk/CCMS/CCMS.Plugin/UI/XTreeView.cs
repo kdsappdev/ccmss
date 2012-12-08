@@ -642,7 +642,7 @@ namespace CCMS.UI
         private void treeView1_DoubleClick(object sender, EventArgs e)
         {
             this.curNode = treeView1.SelectedNode;
-            this.curNode.Checked = true;
+            this.curNode.Checked = true;          
             TreeViewEventArgs tve = new TreeViewEventArgs(curNode);
             if (this.NodeSelected != null)
             {
