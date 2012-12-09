@@ -1,6 +1,6 @@
-﻿namespace Membership.Plugins.MRegister
+﻿namespace Membership.Plugins.CardLossReportingManagement
 {
-    partial class Register
+    partial class CardLossReportingManagement
     {
         /// <summary> 
         /// Required designer variable.
